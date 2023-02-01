@@ -40,3 +40,31 @@ The Objects which have no reference to any other objects or variables are meant 
   <img src = 'https://user-images.githubusercontent.com/100845465/215956250-c4ac7aa0-5351-4fa7-89a0-38a09895d4e4.png'
 </p>
 
+## Functions in Objects: 
+> We also can add functions as the properties in objects. And these properties are called methods of that object. we now that these methods need to access other properties of that object some **this** keyword came into existence. **this** keyword help us to make our object generic. Here, Generic means that all objects that are make from that object out methods still access those their properties.
+#### Example of a generic object:
+
+                       let a = {name: 'sourabh',
+                       class: 'bca',
+                       fetchData() {
+                       return this.name + this.class;
+                        }
+                       }
+                       
+                       //this is refering to the current object 
+                       let b = a; //copying object with reference
+                       a = null;  //clearing reference a 
+                       alert(b.name) //it still work beacuse we are using this, this c
+                       
+
+
+> The above snippet is having generic Objects methods which can be used with other duplicate or changed object reference. **this** changes it reference to the current object.
+
+> The value of **this** is evaluated in the run-time. Because the reference of a object may be null or refering to another object. We dont take care **this** will take care of it.
+
+> calling an function with **this** embedded without use object, the value of **this** is *undefined*
+
+> If we are using this in our function, then remember this is mainly done to make a call of that function with the object, beacuse this need to be decided at runtime.
+
+> Even we can change **this** value in the runtime and use different context for **this**. Javascript provides more flexibility. Simply, we can say **this** can be used unbounded.
+
