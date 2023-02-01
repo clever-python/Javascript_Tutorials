@@ -24,3 +24,19 @@ we can use **Object.structuredClone(ObjName)** and it returns an an duplicate ob
 4. ## Using parse and stringify methods on objects :
 using the above methods first we can make string of the object and then parse it another object, then store it into another variable now it creates a new copy of the object. we can say it produces a deep copy instead of shallow copy for the nested properties also.
 
+<p align="center">
+    <img src="/assets/file.png">
+</p>
+> This is how things work while deep copying or shallow copying.
+
+## JAVASCRIPT OBJECT GARBAGE COLLECTION : 
+The Objects which have no reference to any other objects or variables are meant to be collected for the garbage to save memory. while garbage collection there is not harm for the cpu performance because this algo is perform during the cpu idle time. The algorithm is **Mark and sweep** , It is highly optimised algorithm. The steps followed by this algorithm to collect garbage objects are follows:
+
+1. Firstly, It marks all the reference of objects, it includes all the nested objects.
+2. It marks all the objects with the reference, for all the nested levels.
+3. And the umnarked objects are sweeped because there reference are null, we dont need them in our program.
+
+<p align= 'center'>
+  <img src = 'https://user-images.githubusercontent.com/100845465/215956250-c4ac7aa0-5351-4fa7-89a0-38a09895d4e4.png'
+</p>
+
