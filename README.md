@@ -68,3 +68,29 @@ The Objects which have no reference to any other objects or variables are meant 
 
 > Even we can change **this** value in the runtime and use different context for **this**. Javascript provides more flexibility. Simply, we can say **this** can be used unbounded.
 
+## Constructor Function : 
+> Constructor functions are used for creating dynamic objects and may be implemented in the runtime of out program. Generally, the name of first letter of constructor function is **capital** to show that it is a constructor function. 
+
+### How constructor function works internally:
+> **this** inside any constructor function is refering to an empty object. simply, we can say the implicit return of constructor function is **this**, and here, **this** refers to the constructor itself (by default). 
+
+                    function User(name) {
+                    // this = {};  (implicitly)
+
+                    // add properties to this
+                     this.name = name;
+                     this.isAdmin = false;
+
+                    // return this;  (implicitly)
+                    }
+                    
+> if we create any object with help of this constructor, then the this is refered to that object, we can pass properties value inside an object while calling a constructor and adding arguments as parameters.
+
+## Optional chaining : 
+> Assume if someone try to fetch a property of a object that does not exist, it may give errors as well as make our program collapsed. In order to check and implement those properties we are using optional chaining. 
+he optional chaining ?. stops the evaluation if the value before ?. is undefined or null and returns undefined.
+
+> In other words, value?.prop:
+
+1. works as value.prop, if value exists,
+2. otherwise (when value is undefined/null) it returns undefined.
